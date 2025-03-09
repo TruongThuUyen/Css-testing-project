@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --container-width: 1512px;
+
+  --font-heading: 'Big Shoulders Stencil Text', cursive;
+  --font-big-shoulders-text: 'Big Shoulders Text', sans-seri;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-lexend-deca: 'Lexend Deca', sans-serif;
+  --font-big-shoulder-display: 'Big Shoulders Display', sans-serif;
+
+  --primary-text-color: #d9d9d9;
+  --text-color-blue: #009fe3;
+  --text-midnight-gray: #292929;
+  --background-black-color: #191919;
+  --background-red-color: #e30613;
+
+  /* Transition */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-black-color);
+}
+
+body,
+p,
+a,
+button,
+input,
+textarea,
+.section__text {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section__title {
+  font-family: var(--font-heading);
+}
+
+h2 {
+  font-size: 72px;
+  font-family: 'Big Shoulders Text', sans-seri;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+/* ------------ BANNER CSS ------------ */
+.button-container {
+  position: relative;
+  width: 189px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-background {
+  border-radius: 20px;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 52px),
+    calc(100% - 30px) calc(100% - 30px),
+    calc(100% - 184px) calc(100% - 30px),
+    calc(100% - 196px) calc(100%),
+    0 100%
+  );
+  background-color: rgba(41, 41, 41, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.content__inner::before {
+  content: '';
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  top: 53.5%;
+  right: 0px;
+  border-bottom-right-radius: 24px;
+  background-color: #292929;
+}
+
+.content__inner::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 19px;
+  bottom: -1px;
+  left: 46%;
+  z-index: 0;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 0px #462b33;
+}
+
+.phone-number__inner::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 19px;
+  top: -11px;
+  left: -2px;
+  z-index: 1;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -8px 0px #462b33;
+}
+
+.group-btn__text {
+  font-family: var(--font-big-shoulder-display);
+}
+
+/* ------------ END BANNER CSS ------------ */
+
+/* COMMON CSS */
+.font-big-shoulders-display {
+  font-family: var(--font-big-shoulder-display);
+}
+
+.font-big-shoulders-text {
+  font-family: var(--font-big-shoulders-text);
+}
+
+.font-lexend-deca {
+  font-family: var(--font-lexend-deca);
+}
+
+.section-wrapper {
+  padding-right: 116px;
+  padding-left: 116px;
+}
+
+.h-fit-content {
+  height: fit-content;
+}
+
+.line-height-normal {
+  line-height: normal;
+}
+
+.slide-dot {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: var(--tran-05);
+}
+
+.child-dot {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--primary-text-color);
+  transition: border background-color 0.5s ease-in;
+}
+
+.slide-dot.active,
+.slide-dot:hover {
+  border: 1px solid var(--primary-text-color);
+}
+
+.slide-dot:hover .child-dot,
+.slide-dot.active .child-dot {
+  border: none;
+  background-color: var(--primary-text-color);
+}
