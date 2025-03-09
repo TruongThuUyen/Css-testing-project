@@ -4,14 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&display=swap');
 
 :root {
+  /* Width, height */
   --container-width: 1512px;
 
-  --font-heading: 'Big Shoulders Stencil Text', cursive;
-  --font-big-shoulders-text: 'Big Shoulders Text', sans-seri;
-  --font-body: 'Space Grotesk', sans-serif;
-  --font-lexend-deca: 'Lexend Deca', sans-serif;
-  --font-big-shoulder-display: 'Big Shoulders Display', sans-serif;
-
+  /* Colors */
   --primary-text-color: #d9d9d9;
   --text-color-blue: #009fe3;
   --text-midnight-gray: #292929;
@@ -19,9 +15,6 @@
   --background-red-color: #e30613;
 
   /* Transition */
-  --tran-02: all 0.2s ease;
-  --tran-03: all 0.3s ease;
-  --tran-04: all 0.4s ease;
   --tran-05: all 0.5s ease;
 }
 
@@ -43,7 +36,7 @@ button,
 input,
 textarea,
 .section__text {
-  font-family: var(--font-body);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 h1,
@@ -51,9 +44,8 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.section__title {
-  font-family: var(--font-heading);
+h6 {
+  font-family: 'Big Shoulders Stencil Text', cursive;
 }
 
 h2 {
@@ -71,15 +63,6 @@ button {
 }
 
 /* ------------ BANNER CSS ------------ */
-.button-container {
-  position: relative;
-  width: 189px;
-  height: 49px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .content-background {
   border-radius: 20px;
   clip-path: polygon(
@@ -88,7 +71,7 @@ button {
     100% calc(100% - 52px),
     calc(100% - 30px) calc(100% - 30px),
     calc(100% - 184px) calc(100% - 30px),
-    calc(100% - 196px) calc(100%),
+    calc(100% - 194px) calc(100%),
     0 100%
   );
   background-color: rgba(41, 41, 41, 0.6);
@@ -106,6 +89,20 @@ button {
   background-color: #292929;
 }
 
+.phone-number__inner::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  top: -11px;
+  left: -2px;
+  z-index: 1;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 0px;
+  box-shadow: -8px 0px green;
+  box-shadow: -8px 0px #462b33;
+}
+
 .content__inner::after {
   content: '';
   position: absolute;
@@ -114,46 +111,25 @@ button {
   bottom: -1px;
   left: 46%;
   z-index: 0;
-  border-top-right-radius: 1px;
+  border-top-right-radius: 2px;
   border-bottom-right-radius: 20px;
+  box-shadow: 5px 0px yellow;
   box-shadow: 5px 0px #462b33;
-}
-
-.phone-number__inner::before {
-  content: '';
-  position: absolute;
-  width: 32px;
-  height: 19px;
-  top: -11px;
-  left: -2px;
-  z-index: 1;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 5px;
-  box-shadow: -8px 0px #462b33;
-}
-
-.group-btn__text {
-  font-family: var(--font-big-shoulder-display);
 }
 
 /* ------------ END BANNER CSS ------------ */
 
-/* COMMON CSS */
+/* ------------ COMMON CSS ------------ */
 .font-big-shoulders-display {
-  font-family: var(--font-big-shoulder-display);
+  font-family: 'Big Shoulders Display', sans-serif;
 }
 
 .font-big-shoulders-text {
-  font-family: var(--font-big-shoulders-text);
+  font-family: 'Big Shoulders Text', sans-seri;
 }
 
 .font-lexend-deca {
-  font-family: var(--font-lexend-deca);
-}
-
-.section-wrapper {
-  padding-right: 116px;
-  padding-left: 116px;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 .h-fit-content {
@@ -164,6 +140,14 @@ button {
   line-height: normal;
 }
 
+.section-wrapper {
+  padding-right: 116px;
+  padding-left: 116px;
+}
+
+/* ------------ END COMMON CSS ------------ */
+
+/* ------------ SLIDER CSS ------------ */
 .slide-dot {
   position: relative;
   width: 16px;
@@ -197,3 +181,4 @@ button {
   border: none;
   background-color: var(--primary-text-color);
 }
+/* ------------ END SLIDER CSS ------------ */
