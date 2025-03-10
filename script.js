@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var splide = new Splide('.splide', {
     type: 'fade',
-    // autoplay: true,
+    autoplay: true,
     interval: 4000,
     autoHeight: false,
     rewind: true,
