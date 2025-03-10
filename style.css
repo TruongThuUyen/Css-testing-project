@@ -89,20 +89,6 @@ button {
   background-color: #292929;
 }
 
-.phone-number__inner::before {
-  content: '';
-  position: absolute;
-  width: 22px;
-  height: 19px;
-  top: -11px;
-  left: -2px;
-  z-index: 1;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 0px;
-  box-shadow: -8px 0px green;
-  box-shadow: -8px 0px #462b33;
-}
-
 .content__inner::after {
   content: '';
   position: absolute;
@@ -113,8 +99,20 @@ button {
   z-index: 0;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 20px;
-  box-shadow: 5px 0px yellow;
   box-shadow: 5px 0px #462b33;
+}
+
+.phone-number__inner::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  top: -11px;
+  left: -2px;
+  z-index: 1;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 0px;
+  box-shadow: -8px 0px #462b33;
 }
 
 /* ------------ END BANNER CSS ------------ */
@@ -182,3 +180,50 @@ button {
   background-color: var(--primary-text-color);
 }
 /* ------------ END SLIDER CSS ------------ */
+
+/* ------------ RESPONSIVE ------------ */
+
+@media screen and (max-width: 768px) {
+  .section-wrapper {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+  .content__inner::before {
+    width: 28px;
+    height: 24px;
+    top: 52.5%;
+    right: 1px;
+  }
+
+  .content__inner::after {
+    left: 71%;
+    width: 13px;
+    box-shadow: 5px 0 #402a30;
+  }
+
+  .phone-number__inner::before {
+    width: 16px;
+    height: 16px;
+    left: -5px;
+    box-shadow: -8px 0 #402a30;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content-background {
+    border-radius: 20px;
+    clip-path: unset;
+    background-color: rgba(41, 41, 41, 0.6);
+    backdrop-filter: blur(4px);
+  }
+
+  .phone-number__inner {
+    top: 16px;
+  }
+}
+
+/* ------------ END RESPONSIVE ------------ */

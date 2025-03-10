@@ -8,12 +8,13 @@
     <!-- Import Tailwind CSS -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-    <!-- Import swipper -->
+    <!-- Import slider -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
 
+      <!-- Import CSS -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -52,10 +53,10 @@
         </g>
       </svg>
     </div>
-    <div class="w-full flex flex-col gap-[100px] max-w-[var(--container-width)] mx-auto">
+    <div class="w-full flex flex-col gap-[100px] max-w-[var(--container-width)] mx-auto overflow-x-auto">
       <!-- HEADER -->
-      <div class="fixed top-[10px] w-full l-0 right-0 z-10 w-full">
-        <div class="flex items-center justify-between mt-5 px-14">
+      <div class="fixed top-5 w-full l-0 right-0 z-10 w-full">
+        <div class="flex items-center justify-between px-[46px]">
           <div class="logo">
             <svg
               width="126"
@@ -184,34 +185,21 @@
         <div class="splide__track">
           <ul class="splide__list"></ul>
         </div>
-        <div class="slide-dots absolute bottom-[50px] left-12 flex gap-[10px] z-10"></div>
+        <div class="slide-dots absolute bottom-4 lg:bottom-[50px] left-12 flex gap-[10px] z-10"></div>
+
         <!-- Group button -->
         <a
           href="https://booking.funarenacheb.cz/"
           target="_blank"
-          class="absolute z-10 bottom-[-7px] left-1/2 -translate-x-1/2 flex items-center hover:cursor-pointer">
-          <!-- Reserver and Now Button  -->
-          <div class="relative">
-            <!-- Shadow Layer -->
-            <span class="absolute block top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 -z-10">
-              <span class="relative block w-[264px] h-[210px]">
-                <!-- Blue glow -->
-                <span
-                  class="absolute block w-[100px] h-[100px] top-0 left-0 [background:radial-gradient(50%_50%_at_50%_50%,#E30613_0%,#009FE3_100%)] blur-[50px]"></span>
-                <!-- Red glow -->
-                <span
-                  class="absolute block w-[168px] h-[168px] bottom-0 left-[90px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(0,159,227,0.5)_0%,rgba(227,6,19,0.5)_100%)] blur-[50px]"></span>
-              </span>
-            </span>
-
-            <span class="relative block z-1 h-[65px] flex items-center justify-center">
+          class="absolute z-10 bottom-[-36px] lg:bottom-[-7px] left-1/2 -translate-x-1/2 flex items-center hover:cursor-pointer">
+          <span class="relative block">
+            <!-- Reserver and Now Button  -->
+            <span class="relative block z-1 h-[48px] md:h-[56px] lg:h-[65px] flex items-center justify-center">
               <svg
-                width="166.25"
-                height="65"
                 viewBox="0 0 167 65"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-0 left-0">
+                class="absolute top-0 left-0 w-[148px] lg:w-[166.25px]  h-[48px] md:h-[56px] lg:h-[65px]">
                 <path
                   fill-rule="evenodd"
                   clip-rule="evenodd"
@@ -221,44 +209,57 @@
               </svg>
 
               <svg
-                width="265"
-                height="65"
                 viewBox="0 0 265 65"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[240px] lg:w-[265px] h-[48px] md:h-[56px] lg:h-[65px]">
                 <path
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M1.04561 53.0663C-1.96586 58.3993 1.88719 65 8.01169 65H229.52C232.406 65 235.068 63.4462 236.486 60.9337L263.716 12.713C264.394 11.5127 264.75 10.1577 264.75 8.77933V8C264.75 3.58172 261.168 0 256.75 0H35.6814C32.796 0 30.1342 1.55381 28.7154 4.06633L1.04561 53.0663Z"
                   fill="#E30613" />
               </svg>
-            </span>
 
-            <!-- Text -->
-            <span class="absolute block z-10 inset-0 flex items-center justify-center">
-              <p class="flex gap-8 w-[179px] font-big-shoulders-display leading-[32px]">
-                <span class="text-[var(--primary-text-color)] font-bold text-[32px] tracking-wider"
-                  >RESERVE</span
-                >
-                <span class="text-[var(--primary-text-color)] font-bold text-[32px] tracking-wider"
-                  >NOW!</span
-                >
-              </p>
+              <!-- Text -->
+              <span class="absolute block z-10 inset-0 flex items-center justify-center">
+                <p
+                  class="flex gap-6 lg:gap-8 w-[159px] lg:w-[179px] font-big-shoulders-display leading-[32px]">
+                  <span
+                    class="text-[var(--primary-text-color)] font-bold text-2xl md:text-[28px] lg:text-[32px] tracking-wider"
+                    >RESERVE</span
+                  >
+                  <span
+                    class="text-[var(--primary-text-color)] font-bold text-2xl md:text-[28px] lg:text-[32px] tracking-wider"
+                    >NOW!</span
+                  >
+                </p>
+              </span>
             </span>
-          </div>
+          </span>
         </a>
+
+        <!-- Shadow Layer -->
+        <div class="absolute z-1 block top-[576px] left-1/2 -translate-x-1/2 -z-10">
+          <span class="relative block w-[264px] h-[210px]">
+            <!-- Blue glow -->
+            <span
+              class="absolute block w-[100px] h-[100px] top-0 left-0 [background:radial-gradient(50%_50%_at_50%_50%,#E30613_0%,#009FE3_100%)] blur-[50px]"></span>
+            <!-- Red glow -->
+            <span
+              class="absolute block w-[168px] h-[168px] bottom-0 left-[90px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(0,159,227,0.5)_0%,rgba(227,6,19,0.5)_100%)] blur-[50px]"></span>
+          </span>
+        </div>
       </section>
       <!-- END BANNER SECTION -->
 
       <!-- REGISTRATION SECTION  -->
-      <section class="section-wrapper text-white py-[100px]">
-        <div class="container flex gap-20">
+      <section class="section-wrapper">
+        <div class="flex flex-col xl:flex-row gap-16 lg:gap-20 my-[60px] lg:my-[100px] text-white">
           <!-- Left content -->
-          <div class="h-fit-content left w-1/2 max-w-[566px] text-[var(--primary-text-color)]">
-            <h2 class="text-[32px] font-big-shoulders-display text-[72px] uppercase mb-4">
-              Registration
-            </h2>
-            <p class="text-base w-[566px] leading-[24px]">
+          <div
+            class="h-fit-content w-full xl:max-w-[566px] text-[var(--primary-text-color)]">
+            <h2 class="font-big-shoulders-display font-bold uppercase mb-8 leading-[1.2]">Registration</h2>
+            <p class="text-base w-full lg:w-[566px] leading-[24px]">
               For organizational and security reasons, every visitor to the FUN arena Cheb must
               register before entering the attraction. At the reception, your registration will be
               completed and you will receive a loyalty card which you will use for our services.
@@ -266,12 +267,14 @@
           </div>
 
           <!-- Right steps -->
-          <div class="right max-w-1/2 flex flex-col gap-12">
+          <div class="right w-full xl:w-1/2 flex flex-col gap-12">
             <!-- Step 1 -->
             <div class="relative flex flex-col h-[144px] text-[var(--primary-text-color)]">
-              <div class="absolute top-[14px] flex items-end">
-                <div class="relative h-[50px]">
-                  <svg width="67" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="absolute md:top-[14px] flex items-end">
+                <div class="relative">
+                  <svg width="67" height="50" fill="none" 
+                  class="w-[67px] h-[44px] md:h-[50px]"
+                  xmlns="http://www.w3.org/2000/svg">
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
@@ -280,16 +283,17 @@
                       fill-opacity="0.5" />
                   </svg>
                   <span
-                    class="absolute top-0 left-1/2 -translate-x-1/2 text-[72px] text-[var(--text-color-blue)] font-bold leading-[50px]"
+                    class="absolute -top-[2px] lg:top-0 left-1/2 -translate-x-1/2 text-6xl lg:text-7xl text-[var(--text-color-blue)] font-bold leading-[50px]"
                     >1</span
                   >
                 </div>
 
-                <div class="absolute left-[60px]">
+                <div class="absolute left-[60px] top-[1px] md:top-auto">
                   <svg
                     width="582"
                     height="64"
                     viewBox="0 0 582 64"
+                    class="w-[420px] md:w-[500px] lg:w-[582px] h-fit-content lg:h-[64px]"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -301,16 +305,18 @@
                 </div>
               </div>
               <div class="relative z-1 flex flex-col gap-2 items-center ml-[100px]">
-                <p class="w-full text-[24px] font-bold leading-[64px]">Choose an Attraction</p>
-                <p class="w-full text-base">Choose from the attractions of the FUN arena.</p>
+                <p class="w-full text-2xl font-bold leading-[64px]">Choose an Attraction</p>
+                <p class="w-full text-sm lg:text-base">Choose from the attractions of the FUN arena.</p>
               </div>
             </div>
 
             <!-- Step 2 -->
             <div class="relative flex flex-col h-[144px] text-[var(--primary-text-color)]">
-              <div class="absolute top-[14px] flex items-end">
-                <div class="relative h-[50px]">
-                  <svg width="67" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="absolute md:top-[14px] flex items-end">
+                <div class="relative">
+                  <svg width="67" height="50" fill="none" 
+                  class="w-[67px] h-[44px] md:h-[50px]"
+                  xmlns="http://www.w3.org/2000/svg">
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
@@ -319,16 +325,17 @@
                       fill-opacity="0.5" />
                   </svg>
                   <span
-                    class="absolute top-0 left-1/2 -translate-x-1/2 text-[72px] text-[var(--text-color-blue)] font-bold leading-[50px]"
+                    class="absolute -top-[2px] lg:top-0 left-1/2 -translate-x-1/2 text-6xl lg:text-7xl text-[var(--text-color-blue)] font-bold leading-[50px]"
                     >2</span
                   >
                 </div>
 
-                <div class="absolute left-[60px]">
+                <div class="absolute left-[60px] top-[1px] md:top-auto">
                   <svg
                     width="582"
                     height="64"
                     viewBox="0 0 582 64"
+                    class="w-[420px] md:w-[500px] lg:w-[582px] h-fit-content lg:h-[64px]"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -340,29 +347,33 @@
                 </div>
               </div>
               <div class="relative z-1 flex flex-col gap-2 items-start ml-[100px]">
-                <div class="relative flex w-full max-w-[368px] items-center justify-between">
-                  <p class="text-[24px] font-bold leading-[64px]">Register</p>
+                <div class="relative flex w-full max-w-[296px] md:max-w-[368px] items-center justify-between">
+                  <p class=" text-xl md:text-2xl font-bold leading-[46px] md:leading-[64px]">Register</p>
                   <button
                     class="py-1 px-2 bg-[var(--background-red-color)] text-white text-sm font-bold rounded-[8px] hover:cursor-pointer">
-                    Click here!
+                    <a href="https://web.racefacer.com/kiosk/kartarenacheb">Click here!</a>
                   </button>
                 </div>
 
-                <p class="w-full max-w-[363px] text-base">
+                <p class="w-full max-w-[294px] lg:max-w-[363px] text-sm lg:text-base">
                   You can register at the reception or by clicking the button above from the comfort
                   of your home.
                 </p>
-              </div>
-              <div class="absolute top-[14px] right-[23px]">
-                <img src="./assets/images/qr_code.png" alt="qr code" />
+                <div class="absolute top-[14px] xl:right-[23px] md:right-[80px] right-[58px]">
+                  <img src="./assets/images/qr_code.png" alt="qr code"
+                  class="w-[96px] h-[96px] lg:w-full h-full"
+                  />
+                </div>
               </div>
             </div>
 
             <!-- Step 3 -->
             <div class="relative flex flex-col h-[144px] text-[var(--primary-text-color)]">
-              <div class="absolute top-[14px] flex items-end">
-                <div class="relative h-[50px]">
-                  <svg width="67" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="absolute md:top-[14px] flex items-end">
+                <div class="relative">
+                  <svg width="67" height="50" fill="none" 
+                  class="w-[67px] h-[44px] md:h-[50px]"
+                  xmlns="http://www.w3.org/2000/svg">
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
@@ -371,16 +382,17 @@
                       fill-opacity="0.5" />
                   </svg>
                   <span
-                    class="absolute top-0 left-1/2 -translate-x-1/2 text-[72px] text-[var(--text-color-blue)] font-bold leading-[50px]"
+                    class="absolute -top-[2px] lg:top-0 left-1/2 -translate-x-1/2 text-6xl lg:text-7xl text-[var(--text-color-blue)] font-bold leading-[50px]"
                     >3</span
                   >
                 </div>
 
-                <div class="absolute left-[60px]">
+                <div class="absolute left-[60px] top-[1px] md:top-auto">
                   <svg
                     width="582"
                     height="64"
                     viewBox="0 0 582 64"
+                    class="w-[420px] md:w-[500px] lg:w-[582px] h-fit-content lg:h-[64px]"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -392,8 +404,8 @@
                 </div>
               </div>
               <div class="relative z-1 flex flex-col gap-2 items-center ml-[100px]">
-                <p class="w-full text-[24px] font-bold leading-[64px]">Have Fun</p>
-                <p class="w-full text-base">
+                <p class="w-full text-2xl font-bold leading-[64px]">Have Fun</p>
+                <p class="w-full text-sm lg:text-base">
                   Thank you for your online registrations. For each purchase you get points, which
                   you can apply to our services and attractions then. We look forward to you!
                 </p>
@@ -409,13 +421,13 @@
         <div class="max-w-[1280px]">
           <!-- Header -->
           <header
-            class="flex items-end justify-between max-w-[1047px] mb-12 ml-auto text-[var(--primary-text-color)]">
-            <div class="flex flex-col gap-8 justify-start">
+            class="flex flex-col lg:flex-row lg:items-end gap-5 lg:gap-0 justify-between max-w-[1047px] mb-12 ml-auto text-[var(--primary-text-color)]">
+            <div class="flex flex-col gap-6 lg:gap-8 justify-start">
               <h2
-                class="max-w-[578px] text-[72px] leading-[86px] font-big-shoulders-text font-bold uppercase">
+                class="max-w-full lg:max-w-[578px] text-cente lg:text-start leading-[86px] font-big-shoulders-text font-bold uppercase">
                 New entertainment centre near Cheb
               </h2>
-              <p class="max-w-[365px] text-base">
+              <p class="max-w-full lg:max-w-[365px] text-base">
                 We have been entertaining children and adults in western Bohemia for more than 10
                 years!
               </p>
@@ -469,11 +481,12 @@
       <!-- END ABOUT SECTION-->
 
       <!-- ACTIVITIES SECTION -->
-      <section class="section-wrapper py-[100px]">
+      <section class="section-wrapper ">
+        <div class="my-[60px] lg:my-[100px]">
         <!-- Header -->
         <header
-          class="flex items-center justify-between h-[86px] mb-12 text-[var(--primary-text-color)]">
-          <h2 class="">OUR ATTRACTIONS</h2>
+          class="flex flex-col xl:flex-row items-center justify-between gap-6 lg:gap-0 h-[86px] mb-12 text-[var(--primary-text-color)]">
+          <h2 class="font-bold">OUR ATTRACTIONS</h2>
           <div class="flex items-center gap-6">
             <span class="text-base font-medium tracking-normal"
               >Multiple activities at Fun Arena Cheb</span
@@ -492,172 +505,176 @@
           </div>
         </header>
 
-        <!-- Content -->
-        <div class="flex items-center">
-          <!-- Left content -->
-          <div class="left-content flex flex-col gap-3 max-w-[500px] py-10 pl-[7px]">
-            <!-- Kartarena -->
-            <div class="relative max-w-[460px] h-[64px]">
-              <!-- Background shape -->
-              <div
-                class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
-                <img
-                  src="./assets/images/activities/image-kartarena.png"
-                  alt="Image kartarena"
-                  class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
-
+          <!-- Content -->
+          <div class="flex flex-col lg:flex-row items-center">
+            <!-- Left content -->
+            <div class="left-content flex flex-col gap-3 max-w-[500px] py-10 pl-[7px]">
+              <!-- Kartarena -->
+              <div class="relative max-w-[460px] h-[64px]">
+                <!-- Background shape -->
                 <div
-                  class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
-              </div>
+                  class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
+                  <img
+                    src="./assets/images/activities/image-kartarena.png"
+                    alt="Image kartarena"
+                    class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
 
-              <!-- Content -->
-              <div
-                class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
-                <span
-                  class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
-                  KARTARENA
-                </span>
-              </div>
-            </div>
+                  <div
+                    class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
+                </div>
 
-            <!-- Jumparena -->
-            <div class="relative h-[64px]">
-              <!-- Background shape -->
-              <div
-                class="relative w-[540px] h-full bg-[var(--text-midnight-gray)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
-                <img
-                  src="./assets/images/activities/image-jumparena.png"
-                  alt="Image-jumparena"
-                  class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
-
+                <!-- Content -->
                 <div
-                  class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(41,41,41,0.2)] to-[var(--text-midnight-gray)]"></div>
+                  class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
+                  <span
+                    class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
+                    KARTARENA
+                  </span>
+                </div>
               </div>
 
-              <!-- Content -->
-              <div
-                class="absolute top-1/2 -translate-y-1/2 right-[49px] z-10 h-[38px] w-[352px] flex items-center justify-end">
-                <span
-                  class="test text-[32px] font-big-shoulders-text leading-[100%] text-white font-normal uppercase">
-                  jumparena
-                </span>
-              </div>
-            </div>
-
-            <!-- Virtual reality -->
-            <div class="relative max-w-[460px] h-[64px]">
-              <!-- Background shape -->
-              <div
-                class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
-                <img
-                  src="./assets/images/activities/image-virtual-reality.png"
-                  alt="Image
-                virtual reality"
-                  class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
-
+              <!-- Jumparena -->
+              <div class="relative h-[64px]">
+                <!-- Background shape -->
                 <div
-                  class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
-              </div>
+                  class="relative w-[444px] lg:w-[540px] h-full bg-[var(--text-midnight-gray)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
+                  <img
+                    src="./assets/images/activities/image-jumparena.png"
+                    alt="Image-jumparena"
+                    class="absolute left-[-54px] w-[329px] h-[87px] lg:w-[329px] lh:h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
 
-              <!-- Content -->
-              <div
-                class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
-                <span
-                  class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
-                  virtual reality
-                </span>
-              </div>
-            </div>
+                  <div
+                    class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(41,41,41,0.2)] to-[var(--text-midnight-gray)]"></div>
+                </div>
 
-            <!-- Multiball -->
-            <div class="relative max-w-[460px] h-[64px]">
-              <!-- Background shape -->
-              <div
-                class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
-                <img
-                  src="./assets/images/activities/image-multiball.png"
-                  alt="Image
-                multiball"
-                  class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
-
+                <!-- Content -->
                 <div
-                  class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
+                  class="absolute top-1/2 -translate-y-1/2 right-[49px] z-10 h-[38px] w-[352px] flex items-center justify-end">
+                  <span
+                    class="test text-[32px] font-big-shoulders-text leading-[100%] text-white font-normal uppercase">
+                    jumparena
+                  </span>
+                </div>
               </div>
 
-              <!-- Content -->
-              <div
-                class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
-                <span
-                  class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
-                  multiball
-                </span>
-              </div>
-            </div>
-
-            <!-- Company events -->
-            <div class="relative max-w-[460px] h-[64px]">
-              <!-- Background shape -->
-              <div
-                class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
-                <img
-                  src="./assets/images/activities/image-company-events.png"
-                  alt="Image-company-events"
-                  class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
-
+              <!-- Virtual reality -->
+              <div class="relative max-w-[460px] h-[64px]">
+                <!-- Background shape -->
                 <div
-                  class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
-              </div>
+                  class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
+                  <img
+                    src="./assets/images/activities/image-virtual-reality.png"
+                    alt="Image
+                  virtual reality"
+                    class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
 
-              <!-- Content -->
-              <div
-                class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
-                <span
-                  class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
-                  company events
-                </span>
-              </div>
-            </div>
+                  <div
+                    class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
+                </div>
 
-            <!-- Laser shooting range -->
-            <div class="relative max-w-[460px] h-[64px]">
-              <!-- Background shape -->
-              <div
-                class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
-                <img
-                  src="./assets/images/activities/image-laser-shooting-range.png"
-                  alt="Image laser-shooting-range"
-                  class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
-
+                <!-- Content -->
                 <div
-                  class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
+                  class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
+                  <span
+                    class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
+                    virtual reality
+                  </span>
+                </div>
               </div>
 
-              <!-- Content -->
-              <div
-                class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
-                <span
-                  class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
-                  laser shooting range
-                </span>
+              <!-- Multiball -->
+              <div class="relative max-w-[460px] h-[64px]">
+                <!-- Background shape -->
+                <div
+                  class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
+                  <img
+                    src="./assets/images/activities/image-multiball.png"
+                    alt="Image
+                  multiball"
+                    class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
+
+                  <div
+                    class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
+                </div>
+
+                <!-- Content -->
+                <div
+                  class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
+                  <span
+                    class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
+                    multiball
+                  </span>
+                </div>
+              </div>
+
+              <!-- Company events -->
+              <div class="relative max-w-[460px] h-[64px]">
+                <!-- Background shape -->
+                <div
+                  class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
+                  <img
+                    src="./assets/images/activities/image-company-events.png"
+                    alt="Image-company-events"
+                    class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
+
+                  <div
+                    class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
+                </div>
+
+                <!-- Content -->
+                <div
+                  class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
+                  <span
+                    class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
+                    company events
+                  </span>
+                </div>
+              </div>
+
+              <!-- Laser shooting range -->
+              <div class="relative max-w-[460px] h-[64px]">
+                <!-- Background shape -->
+                <div
+                  class="relative w-[444px] h-full bg-[var(--primary-text-color)] transform -skew-x-[25deg] rounded-tl-[8px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[8px] overflow-hidden">
+                  <img
+                    src="./assets/images/activities/image-laser-shooting-range.png"
+                    alt="Image laser-shooting-range"
+                    class="absolute left-[-54px] w-[329px] h-[87px] transform -skew-x-[-25deg] object-cover rounded-tl-[8px] rounded-bl-[20px]" />
+
+                  <div
+                    class="absolute left-[-56px] w-[329px] h-[64px] -skew-x-[-25deg] box bg-gradient-to-r from-[rgba(217,217,217,0.2)] to-[#D9D9D9]"></div>
+                </div>
+
+                <!-- Content -->
+                <div
+                  class="absolute top-1/2 -translate-y-1/2 right-[38px] z-10 h-[38px] w-[352px] flex items-center justify-end">
+                  <span
+                    class="test text-[32px] font-big-shoulders-text leading-[100%] text-[var(--text-midnight-gray)] font-normal uppercase">
+                    laser shooting range
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Right content -->
-          <div class="relative max-w-[780px] reality z-1">
-            <div>
-              <img src="./assets/images/activities/Shape.png" alt="Shape" />
-            </div>
-            <div
-              class="absolute bottom-0 left-[33px] flex items-end justify-between w-full max-w-[747px]">
-              <p
-                class="max-w-[367px] mb-6 text-[var(--primary-text-color)] text-base leading-[1.25rem]">
-                Arena with lots of attractions for children and adults of all ages. Trampolines,
-                climbing wall, ninja track and other attractions.
-              </p>
+            
+            <!-- Right content -->
+            <div class="relative max-w-[780px] reality z-1">
+                <img
+                  src="./assets/images/activities/Shape.png"
+                  alt="Shape"
+                />
+              <div
+                class="absolute bottom-0 left-[20px] md:left-[33px] flex items-end justify-between w-full max-w-[540px] md:max-w-[620px] lg:max-w-[747px]">
+                <p
+                  class="max-w-[260px] md:max-w-[367px] mb-6 text-[var(--primary-text-color)] text-sm md:text-base leading-[1.25rem]">
+                  Arena with lots of attractions for children and adults of all ages. Trampolines,
+                  climbing wall, ninja track and other attractions.
+                </p>
+              </div>
+
               <button
-                class="py-3 px-6 rounded-full bg-[var(--primary-text-color)] text-base leading-[1.25rem]">
-                Find out more
-              </button>
+                  class="absolute bottom-0 right-0 px-[6px] py-1 sm:py-2 sm:px-4 md:px-5 lg:py-3 lg:px-6 rounded-full bg-[var(--primary-text-color)] text-[10px] md:text-xs sm:text-sm lg:text-base md:leading-[1.25rem]">
+                  Find out more
+                </button>
             </div>
           </div>
         </div>
@@ -667,21 +684,24 @@
       <!--  GIFTING -->
       <section class="section-wrapper">
         <div
-          class="relative flex items-center w-[1000px] h-[109px] mx-auto bg-[var(--background-red-color)] rounded-[24px]">
-          <div class="absolute top-[-65px]">
-            <img src="./assets/images/gift.png" alt="Gift" class="object-cover" />
+          class="relative flex items-center w-full xl:w-[1000px] h-[84px] lg:h-[109px] mx-auto bg-[var(--background-red-color)] rounded-[16px] md:rounded-[24px]">
+          <div
+            class="absolute w-[126px] md:w-[160px] lg:w-auto -top-[34px] md:-top-[50px] lg:-top-[65px]">
+            <img src="./assets/images/gift.png" alt="Gift" class="object-cover w-full h-full" />
           </div>
-          <div class="max-w-[668px] ml-[227px]">
-            <p class="text-[32px] text-white font-medium line-height-normal">
+          <div class="max-w-[580px] md:max-w-[668px] ml-[130px] md:ml-[180px] lg:ml-[227px]">
+            <p
+              class="mb-[3px] md:mb-0 text-base sm:text-xl lg:text-2xl xl:text-[32px] text-white font-medium leading-none md:line-height-normal">
               Make somebody happy with a gift voucher
             </p>
-            <p class="text-base text-white font-medium leading-[1.25rem]">
+            <p
+              class="text-xs md:text-base text-white sm:font-medium leading-none md:leading-[1.25rem]">
               The voucher is valid for all services. Unforgettable experiences for children and
               adults!
             </p>
           </div>
           <button
-            class="absolute -right-[57px] py-3 px-6 text-[var(--text-midnight-gray)] leading-[1.25rem] bg-white font-bold rounded-[12px]">
+            class="absolute -bottom-[54px] lg:bottom-auto left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:-right-[57px] py-2 px-4 lg:py-3 lg:px-6 text-[var(--text-midnight-gray)] text-sm md:text-base leading-[1.25rem] bg-white font-bold rounded-[12px]">
             <a href="https://vouchers.funarenacheb.cz/c/darkovy-poukaz" target="_blank">Buy now</a>
           </button>
         </div>
@@ -691,18 +711,15 @@
       <!--  FOOTER -->
       <section class="section-wrapper">
         <!-- Header Footer  -->
-        <div class="flex flex-col gap-6 py-20">
-          <div class="flex items-center justify-between">
-            <div>
-              <img src="./assets/images/footer_logo.png" alt="Logo" />
+        <div class="flex flex-col gap-6 py-[60px] md:py-20">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <img src="./assets/images/footer_logo.png" alt="Logo" />
+            <div class="max-w-full flex md:inline-block flex-col gap-2 md:max-w-[300px] h-[60px] py-4 text-white text-sm">
+                <span class="leading-none">New entertainment centre FUN arena Cheb. </span>
+                <span class="leading-none">You will find entertainment and sports</span>
+                <span class="leading-none">activities for children and adults here.<span>
             </div>
-            <div class="max-w-[300px] h-[60px] py-4 text-white text-sm">
-              <span class="leading-none"
-                >New entertainment centre FUN arena Cheb. You will find entertainment and sports
-                activities for children and adults here.</span
-              >
-            </div>
-            <div class="flex flex-col items-end gap-[10px] text-sm text-white">
+            <div class="flex flex-col md:items-end gap-[10px] mt-8 md:mt-0 text-sm text-white">
               <span>Potočiště 3, 350 02 Odrava</span>
               <span>fun@funarenacheb.cz</span>
               <span>+420737878891</span>
@@ -710,7 +727,7 @@
           </div>
 
           <!-- Social Media and Copyright Footer -->
-          <div class="flex justify-between">
+          <div class="flex justify-between flex-wrap sm:flex-nowrap">
             <ul
               class="flex items-center gap-3 h-[40px] px-3 bg-[var(--text-midnight-gray)] rounded-[300px]">
               <li class="flex items-center justify-center w-[32px] h-[32px]">
