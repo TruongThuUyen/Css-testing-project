@@ -49,9 +49,8 @@ const renderBanner = () => {
         <li key=${slide.id}
           class="splide__slide relative z-1 flex flex-col justify-end max-w-[var(--container-width)] h-[720px] px-4 lg:px-12 pb-[50px] bg-[linear-gradient(180deg,rgba(25,25,25,0)_52.85%,#191919_100%),url('${slide.url}')] bg-cover bg-center">
           <div class="flex flex-col lg:flex-row items-center lg:items-end justify-between mb-10">
-
             <!-- Left Content -->
-            <div class="text-white mb-8 w-full">
+            <div class="w-full text-white mb-5 sm:mb-0">
               <h1 class="max-w-full lg:max-w-[429px] mb-4 lg:mb-6 text-7xl md:text-8xl xl:text-[120px] font-bold uppercase line-height-normal">${slide.title}</h1>
               <div class="flex items-center justify-between lg:justify-normal gap-0 lg:gap-3 text-[var(--primary-text-color)]">
                 <span class="text-sm max-w-[297px] lg:max-w-[347px] h-[54px] leading-[18px]">
@@ -98,7 +97,7 @@ const renderBanner = () => {
                 alt="Racing flag"
                 class="absolute bottom-[62px] lg:bottom-[98px] left-[-14px] w-[87px] h-[87px] z-1 object-cover" />
 
-              <div class="content__inner relative">
+              <div class="content__inner relative ">
                 <div
                   class="content-background relative pt-2 pl-[14px] pb-5 pr-4 text-var(--primary-text-color)">
                   <div class="flex items-center mb-3">
@@ -176,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var splide = new Splide('.splide', {
     type: 'fade',
-    autoplay: true,
+    // autoplay: true,
     interval: 4000,
     autoHeight: false,
     rewind: true,
