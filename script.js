@@ -1,7 +1,7 @@
 const bannerSlides = [
   {
     id: 1,
-    url: './assets/images/activities/image-go-karts.jpg',
+    url: './assets/images/banner/image-go-karts.png',
     alt: 'image-go-karts',
     title: 'go karts',
     description:
@@ -9,7 +9,7 @@ const bannerSlides = [
   },
   {
     id: 2,
-    url: './assets/images/activities/image-jumparena.png',
+    url: './assets/images/banner/image-jumparena.png',
     alt: 'image-jumparena',
     title: 'jumparena',
     description:
@@ -18,7 +18,7 @@ const bannerSlides = [
 
   {
     id: 3,
-    url: './assets/images/activities/image-virtual-reality.png',
+    url: './assets/images/banner/image-virtual-reality.png',
     alt: 'image-virtual-reality',
     title: 'Virtuální realita',
     description:
@@ -26,7 +26,7 @@ const bannerSlides = [
   },
   {
     id: 4,
-    url: './assets/images/activities/image-multiball.png',
+    url: './assets/images/banner/image-multiball.png',
     alt: 'image-multiball',
     title: 'MULTIBALL',
     description:
@@ -34,7 +34,7 @@ const bannerSlides = [
   },
   {
     id: 5,
-    url: './assets/images/activities/image-laser-shooting-range.png',
+    url: './assets/images/banner/image-laser-shooting-range-1.png',
     alt: 'image-laser-shooting-range',
     title: 'Laserová střelnice',
     description:
