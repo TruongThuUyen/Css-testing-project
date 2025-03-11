@@ -1,7 +1,7 @@
 const bannerSlides = [
   {
     id: 1,
-    url: './assets/images/banner/image-go-kart.png',
+    url: './assets/images/banner/image-go-karts.png',
     alt: 'image-go-karts',
     title: 'go karts',
     description:
