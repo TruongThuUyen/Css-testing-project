@@ -194,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
     rewind: true,
     arrows: false,
     pagination: false,
+    pauseOnHover: false,
   });
 
   splide.on('moved', function (newIndex) {
