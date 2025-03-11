@@ -6,6 +6,7 @@ const bannerSlides = [
     title: 'go karts',
     description:
       'Enjoy an adrenaline ride in any weather. Outdoor track and indoor hall at a professional level with Sodi go-karts.',
+    darkOverlay: false,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const bannerSlides = [
     title: 'jumparena',
     description:
       'Aréna se spoustou atrakcí pro děti i dospělé všech věkových kategorií. Trampolíny, lezecká stěna, ninja dráha a další atrakce.',
+    darkOverlay: false,
   },
 
   {
@@ -23,6 +25,7 @@ const bannerSlides = [
     title: 'Virtuální realita',
     description:
       'Díky naší virtuální realitě vstoupíte do jiného světa a poznáte nové technologie. Vyberte si z naší nabídky her a zažijte VR na vlastní kůži.',
+    darkOverlay: false,
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const bannerSlides = [
     title: 'MULTIBALL',
     description:
       'Interaktivní sportovní a herní konzole, která z pohybu a vzdělávání dělá opravdovou zábavu. Velké množství her zaujme všechny věkové kategorie.',
+    dartOverlay: false,
   },
   {
     id: 5,
@@ -39,6 +43,7 @@ const bannerSlides = [
     title: 'Laserová střelnice',
     description:
       'Vyzkoušejte si nebo vypilujte svou mušku! Laserová střelnice se třemi režimy střelby na čas otestuje nejen vaši přesnost, ale také rychlost a postřeh.',
+    darkOverlay: true,
   },
 ];
 
@@ -46,12 +51,20 @@ const renderBanner = () => {
   const splideListEl = document.querySelector('.splide__list');
   bannerSlides.forEach((slide) => {
     splideListEl.innerHTML += `
-        <li key=${slide.id}
-          class="splide__slide relative z-1 flex flex-col justify-end max-w-[var(--container-width)] h-[720px] px-4 lg:px-12 pb-[50px] bg-[linear-gradient(180deg,rgba(25,25,25,0)_52.85%,#191919_100%),url('${slide.url}')] bg-cover bg-center">
+       <li key=${slide.id}
+  class="splide__slide relative z-1 flex flex-col justify-end max-w-[var(--container-width)] h-[720px] px-4 lg:px-12 pb-[50px] ${
+    slide.darkOverlay
+      ? "bg-[linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),linear-gradient(180deg,rgba(25,25,25,0)_52.85%,#191919_100%),url('" +
+        slide.url +
+        "')]"
+      : "bg-[linear-gradient(180deg,rgba(25,25,25,0)_52.85%,#191919_100%),url('" + slide.url + "')]"
+  } bg-cover bg-center">
           <div class="flex flex-col lg:flex-row items-center lg:items-end justify-between mb-10">
             <!-- Left Content -->
             <div class="w-full text-white mb-5 sm:mb-0">
-              <h1 class="max-w-full lg:max-w-[429px] mb-4 lg:mb-6 text-7xl md:text-8xl xl:text-[120px] font-bold uppercase line-height-normal">${slide.title}</h1>
+              <h1 class="max-w-full lg:max-w-[429px] mb-4 lg:mb-6 text-7xl md:text-8xl xl:text-[120px] font-bold uppercase line-height-normal">${
+                slide.title
+              }</h1>
               <div class="flex items-center justify-between lg:justify-normal gap-0 lg:gap-3 text-[var(--primary-text-color)]">
                 <span class="text-sm max-w-[297px] lg:max-w-[347px] h-[54px] leading-[18px]">
                  ${slide.description}
